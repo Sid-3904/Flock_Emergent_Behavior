@@ -5,14 +5,14 @@ import matplotlib.animation as animation
 
 # hyperparameters
 vmax = 5
-vmin = 2
+vmin = 3
 r2 = 500
 close2 = 2000
 avoid = 0.01
 aligning = 0.05
 cohede = 0.05
 turnfactor = 0.8
-biasval = 0.0005
+biasval = 0.005
 
 # dimensions
 n = 50
@@ -32,7 +32,7 @@ class Boid:
         self.vy = vy
         self.b_id = b_id
         self.neighbours = []
-        self.group = random.choice([0, 1, 2])
+        self.group = random.choice([0, 0, 1, 2])
 
     def move(self):
         # separation
